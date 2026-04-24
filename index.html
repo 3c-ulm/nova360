@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Standort wählen</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f2f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 90px;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: pointer;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      padding: 18px 24px;
+      transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      border-color: #aaa;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .btn:active { transform: scale(0.97); }
+
+    .btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .btn-vw {
+      gap: 10px;
+      padding: 20px 16px;
+    }
+
+    .btn-vw img {
+      width: 44px;
+      height: 44px;
+    }
+
+    @media (max-width: 480px) {
+      .btn { width: 260px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons">
+    <a class="btn" href="https://nova360app.de/vgrd/ulmaudi/audiulm/dist/?ext=user#/">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/600px-Audi-Logo_2016.svg.png" alt="Audi" />
+    </a>
+    <a class="btn btn-vw" href="https://nova360app.de/vgrd/heldstroehlede/heldstroehle/dist/?ext=user#/">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/600px-Volkswagen_logo_2019.svg.png" alt="VW" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skoda_Auto_logo.svg/600px-Skoda_Auto_logo.svg.png" alt="Skoda" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Seat-Logo.svg/600px-Seat-Logo.svg.png" alt="Seat" />
+    </a>
+  </div>
+</body>
+</html>
