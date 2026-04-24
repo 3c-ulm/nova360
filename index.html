@@ -27,7 +27,7 @@
     }
     .buttons {
       display: flex;
-      gap: 20px;
+      gap: 16px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -40,23 +40,29 @@
       border-radius: 12px;
       text-decoration: none;
       cursor: pointer;
-      background: #ffffff;
-      border: 1px solid #e0e0e0;
+      background: transparent;
+      border: 2px solid #1d9e75;
       padding: 18px 24px;
-      transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
-      flex-direction: column;
-      gap: 4px;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
     }
     .btn:hover {
-      border-color: #aaa;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: #1d9e75;
+      box-shadow: 0 4px 16px rgba(29, 158, 117, 0.35);
+    }
+    .btn:hover .btn-brand,
+    .btn:hover .btn-brands span {
+      color: #ffffff;
+    }
+    .btn:hover .btn-brands .divider {
+      color: rgba(255,255,255,0.4);
     }
     .btn:active { transform: scale(0.97); }
     .btn-brand {
       font-size: 22px;
       font-weight: 700;
-      color: #111;
+      color: #1d9e75;
       letter-spacing: 0.5px;
+      transition: color 0.2s ease;
     }
     .btn-brands {
       display: flex;
@@ -66,12 +72,15 @@
     .btn-brands span {
       font-size: 16px;
       font-weight: 700;
-      color: #111;
+      color: #1d9e75;
+      transition: color 0.2s ease;
     }
     .btn-brands .divider {
       font-size: 14px;
-      color: #bbb;
+      color: #1d9e75;
+      opacity: 0.4;
       font-weight: 400;
+      transition: color 0.2s ease;
     }
     @media (max-width: 480px) {
       .btn { width: 260px; }
