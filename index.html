@@ -44,24 +44,34 @@
       border: 1px solid #e0e0e0;
       padding: 18px 24px;
       transition: border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+      flex-direction: column;
+      gap: 4px;
     }
     .btn:hover {
       border-color: #aaa;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .btn:active { transform: scale(0.97); }
-    .btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    .btn-brand {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: 0.5px;
     }
-    .btn-vw {
-      gap: 10px;
-      padding: 20px 16px;
+    .btn-brands {
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
-    .btn-vw img {
-      width: 44px;
-      height: 44px;
+    .btn-brands span {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111;
+    }
+    .btn-brands .divider {
+      font-size: 14px;
+      color: #bbb;
+      font-weight: 400;
     }
     @media (max-width: 480px) {
       .btn { width: 260px; }
@@ -73,12 +83,16 @@
     <img class="logo" src="Basis_PNG.png" alt="3C Detailing" />
     <div class="buttons">
       <a class="btn" href="https://nova360app.de/vgrd/ulmaudi/audiulm/dist/?ext=user#/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/600px-Audi-Logo_2016.svg.png" alt="Audi" />
+        <span class="btn-brand">Audi</span>
       </a>
-      <a class="btn btn-vw" href="https://nova360app.de/vgrd/heldstroehlede/heldstroehle/dist/?ext=user#/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/600px-Volkswagen_logo_2019.svg.png" alt="VW" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Skoda_Auto_logo.svg/600px-Skoda_Auto_logo.svg.png" alt="Skoda" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Seat-Logo.svg/600px-Seat-Logo.svg.png" alt="Seat" />
+      <a class="btn" href="https://nova360app.de/vgrd/heldstroehlede/heldstroehle/dist/?ext=user#/">
+        <div class="btn-brands">
+          <span>VW</span>
+          <span class="divider">|</span>
+          <span>Skoda</span>
+          <span class="divider">|</span>
+          <span>Seat</span>
+        </div>
       </a>
     </div>
   </div>
